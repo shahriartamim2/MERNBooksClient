@@ -18,7 +18,8 @@ const Createbook = () => {
     setBook({ ...book, [e.target.name]: e.target.value });
     console.log(book)
   };
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
     setLoading(true);
 
     axios
