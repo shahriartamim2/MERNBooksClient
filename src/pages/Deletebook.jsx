@@ -7,7 +7,8 @@ const Deletebook = () => {
   const navigate = useNavigate();
     const { id } = useParams();
   const [loading, setLoading] = useState(false)
-  const DeleteBook = ()=>{
+  const DeleteBook = (e)=>{
+    e.preventDefault();
     setLoading(true);
     axios
       .delete(`https://track-books.onrender.com/books/${id}`)
