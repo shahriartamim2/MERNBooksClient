@@ -9,12 +9,13 @@ const Deletebook = () => {
   const [loading, setLoading] = useState(false)
   const DeleteBook = ()=>{
     setLoading(true);
-    axios.delete(`http://localhost:4000/books/${id}`)
-    .then(()=>{
-      setLoading(false);
-      navigate('/');
-    })
-    .catch((err)=>console.log(err))
+    axios
+      .delete(`https://track-books.onrender.com/books/${id}`)
+      .then(() => {
+        setLoading(false);
+        navigate("/");
+      })
+      .catch((err) => console.log(err));
   }
   return (
     <div className="max-w-md mx-auto my-10 p-8 rounded-lg shadow-lg bg-white">

@@ -24,7 +24,7 @@ const Createbook = () => {
     setLoading(true);
 
     axios
-      .put(`http://localhost:4000/books/${id}`, book)
+      .put(`https://track-books.onrender.com/books/${id}`, book)
       .then(() => {
         setLoading(false);
         navigate("/books");

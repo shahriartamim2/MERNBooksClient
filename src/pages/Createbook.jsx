@@ -22,10 +22,10 @@ const Createbook = () => {
     setLoading(true);
 
     axios
-      .post("http://localhost:4000/books", book)
+      .post("https://track-books.onrender.com/books", book)
       .then(() => {
-        setLoading(false)
-        navigate('/books');
+        setLoading(false);
+        navigate("/books");
       })
       .catch((err) => console.log(err));
   };
